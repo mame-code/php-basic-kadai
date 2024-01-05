@@ -15,15 +15,17 @@
     private $name;
     private $price;
 
-    //priceの値をメソッドを定義する
-    public function show_price (){
-      $this->price = $price.'<br>';
-    }
     //値を代入するコンストラクタを作成する
-      public function __construct(string $name, int $price) {
+    public function __construct(string $name, int $price) {
       $this->name = $name;
       $this->price = $price;
     }
+
+    //priceの値をメソッドを定義する
+    public function show_price (){
+      echo $this->price ;
+    }
+    
   }
 
   class Animal {
@@ -32,16 +34,18 @@
     private $height;
     private $weight;
 
-    //priceの値をメソッドを定義する
-    public function show_height (){
-      $this->height = $height.'<br>';
-    }
     //値を代入するコンストラクタを作成する
-      public function __construct(string $name, int $height, int $weight) {
+    public function __construct(string $name, int $height, int $weight) {
       $this->name = $name;
       $this->height = $height;
       $this->weight = $weight;
     }
+
+    //priceの値をメソッドを定義する
+    public function show_height (){
+      echo $this->height ;
+    }
+    
   }
 
     //任意の引数を渡すインスタンスを作成する
@@ -52,7 +56,16 @@
     print_r($food);
     echo '<br>';
     print_r($animal);
+    echo '<br>';
+
+    //メソッドにアクセスする
+    $food ->show_price();
+    echo '<br>';
+    $animal->show_height();
+
     ?>
+
+
   
 </p>
 </body>
